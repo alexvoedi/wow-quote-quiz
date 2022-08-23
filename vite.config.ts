@@ -5,14 +5,17 @@ import VueI18n from "@intlify/vite-plugin-vue-i18n";
 import Components from "unplugin-vue-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
 import Unocss from "unocss/vite";
-import Inspect from 'vite-plugin-inspect'
+import Inspect from "vite-plugin-inspect";
 
 export default defineConfig({
+  base: "/wow-quiz-game/",
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
     },
   },
+
   plugins: [
     Vue(),
 
@@ -56,5 +59,5 @@ export default defineConfig({
 
   server: {
     host: true,
-  }
+  },
 });
