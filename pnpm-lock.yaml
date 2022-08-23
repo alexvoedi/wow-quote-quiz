@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fontsource/lora': ^4.5.11
   '@iconify-json/mdi': ^1.1.30
   '@intlify/vite-plugin-vue-i18n': ^6.0.1
   '@types/node': ^18.7.11
@@ -35,6 +36,7 @@ specifiers:
   vue-tsc: ^0.40.1
 
 dependencies:
+  '@fontsource/lora': 4.5.11
   '@vueuse/core': 9.1.1_vue@3.2.37
   '@vueuse/head': 0.7.9_vue@3.2.37
   pinia: 2.0.20_j6bzmzd4ujpabbp5objtwxyjp4
@@ -125,6 +127,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@fontsource/lora/4.5.11:
+    resolution: {integrity: sha512-Ah4hfKAmB0hlOKe1w+x0GIrFSJ1Ea84lBfzEkMS7G2uk8+iv+yqYmvylDDU5gbGkZB89Zo2XUURN/PdTX79EoA==}
+    dev: false
 
   /@humanwhocodes/config-array/0.10.4:
     resolution: {integrity: sha512-mXAIHxZT3Vcpg83opl1wGlVZ9xydbfZO3r5YfRSH6Gpp2J/PfdBP0wbDa2sO6/qRbcalpoevVyW6A/fI6LfeMw==}

@@ -15,11 +15,19 @@ export default defineConfig({
     presetIcons({
       warn: true,
       extraProperties: {
-        'display': 'inline-block',
-        'vertical-align': 'middle',
+        display: "inline-block",
+        "vertical-align": "middle",
       },
     }),
     presetTypography(),
   ],
+  theme: {
+    fontFamily: {
+      main: ["Lora", "serif"],
+    },
+    colors: {
+      primary: "#efd213",
+    },
+  },
   transformers: [transformerDirectives(), transformerVariantGroup()],
 });

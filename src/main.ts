@@ -10,6 +10,7 @@ const app = createApp(App);
 
 import "@unocss/reset/tailwind.css";
 import "uno.css";
+import "@fontsource/lora";
 
 app.use(router);
 app.use(i18n);

@@ -25,6 +25,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@fontsource/lora": "^4.5.11",
     "@vueuse/core": "^9.1.1",
     "@vueuse/head": "^0.7.9",
     "pinia": "^2.0.20",
