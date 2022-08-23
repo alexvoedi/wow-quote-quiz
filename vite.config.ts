@@ -8,7 +8,7 @@ import Unocss from "unocss/vite";
 import Inspect from "vite-plugin-inspect";
 
 export default defineConfig({
-  base: "/wow-quiz-game/",
+  base: "/wow-quote-quiz/",
 
   resolve: {
     alias: {

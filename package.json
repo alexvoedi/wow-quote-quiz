@@ -1,22 +1,23 @@
 {
-  "name": "",
+  "name": "@alexvoedi/wow-quote-quiz",
   "version": "0.0.1",
-  "description": "",
-  "keywords": [],
-  "homepage": "",
-  "bugs": {
-    "url": "",
-    "email": ""
-  },
+  "description": "a quiz about quotes from world of warcraft",
+  "keywords": [
+    "world of warcraft",
+    "quote",
+    "quiz",
+    "vue"
+  ],
+  "homepage": "https://alexvoedi.github.io/wow-quote-quiz/",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Alexander Vödisch",
+    "email": "voedisch.alexander@gmail.com"
   },
   "private": true,
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/alexvoedi/wow-quote-quiz"
   },
   "scripts": {
     "dev": "vite",
