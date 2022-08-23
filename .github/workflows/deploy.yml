@@ -1,0 +1,25 @@
+name: Build and Deploy
+
+on: [push]
+
+env:
+  VITE_API_URL: https://api.atsuzoko.de
+  VITE_WEBSITE_URL: https://atsuzoko.de
+
+jobs:
+  build_vue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: dist
+          folder: dist
