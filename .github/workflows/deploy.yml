@@ -2,10 +2,6 @@ name: Build and Deploy
 
 on: [push]
 
-env:
-  VITE_API_URL: https://api.atsuzoko.de
-  VITE_WEBSITE_URL: https://atsuzoko.de
-
 jobs:
   build_vue:
     runs-on: ubuntu-latest
