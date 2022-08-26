@@ -13,6 +13,7 @@ export default defineConfig({
     presetUno(),
     presetAttributify(),
     presetIcons({
+      prefix: "ico-",
       warn: true,
       extraProperties: {
         display: "inline-block",

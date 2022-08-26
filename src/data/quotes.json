@@ -1,0 +1,96 @@
+[
+  {
+    "id": 74505,
+    "name": {
+      "de": "Thruk",
+      "en": "Thruk"
+    },
+    "quotes": [
+      {
+        "text": {
+          "de": "Thruk will Wächterschatz!"
+        },
+        "audio": {
+          "id": 46796,
+          "files": {
+            "de": true
+          }
+        }
+      },
+      {
+        "text": {
+          "de": "Ha, kleine Fische!"
+        },
+        "audio": {
+          "id": 46797,
+          "files": {
+            "de": true
+          }
+        }
+      },
+      {
+        "text": {
+          "de": "Haha, Thruk hat euch am Haken!"
+        },
+        "audio": {
+          "id": 46797,
+          "files": {
+            "de": true
+          }
+        }
+      },
+      {
+        "text": {
+          "de": "Bah, der Fang ist zu hässlich zum Essen!"
+        },
+        "audio": {
+          "id": 46799,
+          "files": {
+            "de": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": 7800,
+    "name": {
+      "de": "Robogenieur Thermadraht"
+    },
+    "quotes": [
+      {
+        "text": {
+          "de": "Thronräuber, Gnomeregan ist mein!"
+        },
+        "audio": {
+          "id": 5807,
+          "files": {
+            "de": true
+          }
+        }
+      },
+      {
+        "text": {
+          "de": "Meine Maschinen sind die Zukunft, sie vernichten euch alle!"
+        },
+        "audio": {
+          "id": 5808,
+          "files": {
+            "de": true
+          }
+        }
+      },
+      {
+        "text": {
+          "de": "Explosionen, mehr Explosionen, ich brauche mehr Explosionen!"
+        },
+        "audio": {
+          "id": 5809,
+          "files": {
+            "de": true
+          }
+        }
+      }
+    ]
+  }
+]

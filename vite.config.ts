@@ -41,6 +41,9 @@ export default defineConfig({
       dts: "src/auto-import.d.ts",
       dirs: ["src/composables", "src/store"],
       vueTemplate: true,
+      eslintrc: {
+        enabled: true,
+      },
     }),
 
     // https://github.com/antfu/unocss

@@ -14,7 +14,7 @@ body,
 #app {
   @apply font-main p-8 grid items-center justify-center;
 
-  background-image: url("/bg-image.jpg");
+  background-image: url("/bg-image.webp");
   background-size: cover;
 }
 </style>
