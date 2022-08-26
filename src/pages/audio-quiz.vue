@@ -11,7 +11,7 @@ const quote = computed(() => {
   return npcsWithAudio[Math.floor(Math.random() * npcsWithAudio.length)];
 });
 
-const audio = new Audio(`/sounds/quotes/de/74505/46796`);
+const audio = new Audio(`./sounds/quotes/de/74505/46796`);
 
 const npcs = computed(() => {
   const npcs = [];
