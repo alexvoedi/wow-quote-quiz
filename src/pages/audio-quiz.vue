@@ -5,13 +5,13 @@ const timer = ref(-3);
 
 const quote = computed(() => {
   const npcsWithAudio = quotes.filter((npc) =>
-    npc.quotes.some((quote) => quote.audio.de)
+    npc.quotes.some((quote) => quote.audio.files.de)
   );
 
   return npcsWithAudio[Math.floor(Math.random() * npcsWithAudio.length)];
 });
 
-const audio = new Audio(`/sounds/quotes/de/74505/1`);
+const audio = new Audio(`/sounds/quotes/de/74505/46796`);
 
 const npcs = computed(() => {
   const npcs = [];
