@@ -1,1 +1,0 @@
-import{q as e}from"./quotes.7333fe73.js";import{e as t,f as a,o as s,c as o,t as r,u as n}from"./index.cb88a231.js";const l=t({__name:"text-quiz",setup(c){return a({started:!1}),(f,p)=>(s(),o("div",null,r(n(e)),1))}});export{l as default};
