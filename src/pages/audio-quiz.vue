@@ -1,30 +1,26 @@
 <script setup lang="ts">
 import quotes from "@/data/quotes.json";
 
-const timer = ref(-3);
+const timer = ref(-1);
+const audioUrl = ref();
+const npc = ref();
+const quote = ref();
+const answers = ref<{ id: number; name: string }[]>([]);
+const answer = ref();
 
-const quote = computed(() => {
+const audio = computed(() => new Audio(audioUrl.value));
+
+const getRandomNpc = () => {
   const npcsWithAudio = quotes.filter((npc) =>
     npc.quotes.some((quote) => quote.audio.files.de)
   );
 
   return npcsWithAudio[Math.floor(Math.random() * npcsWithAudio.length)];
-});
+};
 
-const audio = new Audio(`./sounds/quotes/de/74505/46796`);
-
-const npcs = computed(() => {
-  const npcs = [];
-
-  npcs.push({
-    id: quote.value.id,
-    name: quote.value.name.de,
-  });
-
-  return npcs;
-});
-
-const answer = ref();
+const getRandomQuote = () => {
+  return npc.value.quotes[Math.floor(Math.random() * npc.value.quotes.length)];
+};
 
 const runTimer = () => {
   let lastUpdate = Date.now();
@@ -36,23 +32,45 @@ const runTimer = () => {
 
     if (answer.value) {
       clearInterval(interval);
+      nextTurn();
     }
   }, 50);
 };
 
 const playAudio = () => {
-  if (timer.value === -3) {
+  if (timer.value <= -1) {
     runTimer();
   }
 
-  audio.pause();
-  audio.currentTime = 0;
-  audio.play();
+  audio.value.pause();
+  audio.value.currentTime = 0;
+  audio.value.play();
 };
 
 const selectAnswer = (npcId: number) => {
   answer.value = npcId;
 };
+
+const nextTurn = () => {
+  timer.value = -1;
+
+  npc.value = getRandomNpc();
+  quote.value = getRandomQuote();
+
+  audioUrl.value = `./sounds/quotes/de/${npc.value.id}/${quote.value.audio.id}`;
+
+  answers.value = [];
+  answer.value = null;
+
+  answers.value.push({
+    id: npc.value.id,
+    name: npc.value.name.de,
+  });
+};
+
+onMounted(() => {
+  nextTurn();
+});
 </script>
 
 <template>
@@ -68,11 +86,12 @@ const selectAnswer = (npcId: number) => {
 
     <div>
       <button
-        v-for="(npc, index) in npcs"
+        :disabled="timer < 0"
+        v-for="(answer, index) in answers"
         :key="index"
-        @click="selectAnswer(npc.id)"
+        @click="selectAnswer(answer.id)"
       >
-        {{ npc.name }}
+        {{ answer.name }}
       </button>
     </div>
   </div>
